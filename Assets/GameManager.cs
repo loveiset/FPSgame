@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour {
 
     static int m_hiscore = 0;
 
-    int m_ammo = 0;
+    int m_ammo = 10;
 
     Player m_player;
 
@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour {
     public void SetAmmo(int ammo)
     {
         m_ammo -= ammo;
-        if (ammo <= 0)
+        if (m_ammo <= 0)
         {
             m_ammo = 100 - m_ammo;
 
